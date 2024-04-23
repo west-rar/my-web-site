@@ -1,0 +1,142 @@
+
+.loader {
+    display: block;
+    width: 84px;
+    height: 84px;
+    position: relative;
+  }
+  
+  .loader:before , .loader:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #F2613F;
+    transform: translate(-50% , -100%)  scale(0);
+    animation: push_401 2s infinite linear;
+  }
+  
+  .loader:after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes push_401 {
+    0% , 50% {
+      transform: translate(-50% , 0%)  scale(1)
+    }
+  
+    100% {
+      transform: translate(-50%, -100%) scale(0)
+    }
+  }
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
+
+  body {
+    background: #1b1b1b;
+    
+ }
+
+.main-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #272727;
+    border: 2px solid #f04721;
+    border-right-width: 0 ;
+    border-top-width:0;
+    -webkit-box-shadow: -19px 21px 24px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -19px 21px 24px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: -19px 21px 24px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 0 2%;
+}
+
+.main {
+    margin:10% 25% 10% 25% ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+}
+@media (max-width:700px) {
+    .main {
+        margin:10% 3% 0 3%;
+    }
+}
+
+.main-text {
+    color: #F2613F;
+    font-family:'Montserrat';
+}
+
+h1 {
+    font-family: "Montserrat", cursive;
+    color: #F2613F;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #F2613F;
+    border: 2px solid #F2613F;
+    border-radius: 5px;
+    background-color: transparent;
+    font-weight: 400;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    font-family:'Montserrat';
+     background-color: #272727 ;
+     text-decoration: none;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #F2613F;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    display: flex;
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #212121 !important;
+    scale: 1.1;
+  }
+  
+  .button:active {
+    scale: 1;
+  }
