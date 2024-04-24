@@ -144,6 +144,12 @@
   flex-direction: column;
   gap: 10px;
 }
+
+@media (max-width:700px) {
+  .main {
+      margin:10% 2% 0 2%;
+  }
+}
 .link-text {
   background: none;
   border: 0;
@@ -180,3 +186,4 @@
   max-width: 27px;
   padding: 0 0 5px;
 }
+
