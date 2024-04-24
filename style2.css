@@ -80,7 +80,7 @@
     flex-direction: column;
     gap: 10px;   
 }
-@media (max-width:700px) {
+@media (max-width:1200px) {
     .main {
         margin:10% 3% 0 3%;
     }
